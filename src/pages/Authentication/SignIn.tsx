@@ -37,7 +37,7 @@ const SignIn: React.FC = () => {
       <div className="w-full mx-auto max-w-[500px] shadow-default bg-white dark:border-strokedark h-full dark:bg-boxdark">
         <div className="w-full sm:p-8 xl:p-10">
           <span className="mb-1.5 block font-medium">Start for free</span>
-          <h2 className="mb-4 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
+          <h2 className="mb-4 text-2xl font-bold text-orange-500 dark:text-white sm:text-title-xl2">
             Sign In to Loop
           </h2>
 
