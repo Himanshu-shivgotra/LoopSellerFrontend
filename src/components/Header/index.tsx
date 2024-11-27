@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import DropdownMessage from './DropdownMessage';
 import DropdownNotification from './DropdownNotification';
@@ -49,12 +49,10 @@ const Header = (props: {
     }
   }, [navigate]);
 
-  const handleLogout = async () => {
+  const handleLogout = useCallback(async () => {
     localStorage.removeItem('authToken'); // Clear the token
-    // Optionally, you can add a small delay to ensure the UI updates before navigating
-    await new Promise(resolve => setTimeout(resolve, 0)); 
-    navigate("/auth/signin");
-  };
+    navigate("/auth/signin"); // Navigate immediately after removing the token
+  }, [navigate]);
 
   return (
     <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
