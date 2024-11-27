@@ -14,7 +14,7 @@ const StartSellingSection = () => {
             </div>
 
             {/* Right Content (Image) */}
-            <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center">
+            <div className="mt-14 md:w-1/2 flex justify-center">
                 <img
                     src="https://loopin.netlify.app/static/media/seller.950fb2364d15df947190d05adb0f73fb.svg" // Replace with your image link
                     alt="Start Selling"
