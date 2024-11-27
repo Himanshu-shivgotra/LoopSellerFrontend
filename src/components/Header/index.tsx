@@ -49,9 +49,11 @@ const Header = (props: {
     }
   }, [navigate]);
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     localStorage.removeItem('authToken'); // Clear the token
-    navigate("/auth/signin")
+    // Optionally, you can add a small delay to ensure the UI updates before navigating
+    await new Promise(resolve => setTimeout(resolve, 0)); 
+    navigate("/auth/signin");
   };
 
   return (
