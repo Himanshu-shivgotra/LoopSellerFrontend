@@ -4,7 +4,7 @@ export const AuthHeader = () => {
     return (
         <>
             <div
-            className={`w-full z-50 text-white transition-all duration-500 ease-in-out bg-transparent mb-6   
+            className={`w-full z-50 text-white transition-all duration-500 ease-in-out bg-transparent mb-10 
                 }`}
         >
             <div className="container mx-auto">

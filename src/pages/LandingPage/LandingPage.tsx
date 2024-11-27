@@ -9,7 +9,7 @@ type Props = {}
 function LandingPage({ }: Props) {
     return (
         <>
-         <div className="bg-gradient-to-r from-black via-gray-900 to-black min-h-screen text-white">
+         <div className="p-20 lg:p-40 md:p-10 sm:p-5 bg-gradient-to-r from-black via-gray-900 to-black min-h-screen text-white">
             <SellerHeader/>
             <StartSellingSection/>
             <WhySellWithUs/>

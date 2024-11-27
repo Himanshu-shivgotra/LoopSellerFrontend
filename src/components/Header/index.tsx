@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// import DropdownMessage from './DropdownMessage';
+import DropdownMessage from './DropdownMessage';
 import DropdownNotification from './DropdownNotification';
 import DropdownUser from './DropdownUser';
+import LogoIcon from '../../images/logo/logo-icon.svg';
 import DarkModeSwitcher from './DarkModeSwitcher';
 
 const Header = (props: {
@@ -70,7 +71,7 @@ const Header = (props: {
           </button>
 
           <Link className="block flex-shrink-0 lg:hidden" to="/">
-            <img src="" alt="Logo" />
+            <img src={LogoIcon} alt="Logo" />
           </Link>
         </div>
 
@@ -85,7 +86,7 @@ const Header = (props: {
             {/* Notification Menu */}
             <DropdownNotification />
             {/* Message Notification */}
-            {/* <DropdownMessage /> */}
+            <DropdownMessage />
           </ul>
 
           {/* User Dropdown */}

@@ -46,7 +46,7 @@ const SellerNavbar = () => {
             className={`fixed top-0 left-0 w-full z-50 text-white transition-all duration-500 ease-in-out ${isScrolled ? "bg-[#141414] shadow-md" : "bg-transparent"
                 }`}
         >
-            <div className="container px-2">
+            <div className="container lg:px-20 md:px-8 sm:px-4">
                 <nav className="flex justify-between items-center">
                     {/* Logo Section */}
                     <div className="flex items-center space-x-2">
@@ -145,7 +145,7 @@ const SellerNavbar = () => {
                             </Link>
                             <Link to="/auth/signup">
                             <button
-                                className="bg-transparent text-white border-2-white font-bold py-2 px-4 hover:text-black hover:bg-white"
+                                className="bg-transparent text-white border-2 border-white font-bold py-2 px-4 hover:text-black hover:bg-white"
                             >
                                 Start Selling
                             </button>

@@ -92,8 +92,8 @@ const BankDetails: React.FC<{
     return (
         <div className="rounded-sm  flex items-center justify-center w-full">
             <div className="w-full mx-auto max-w-180 shadow-default bg-white dark:border-strokedark h-full dark:bg-boxdark">
-                <div className="w-full  sm:p-8 xl:px-10">
-                    <h2 className="mb-6 text-2xl font-bold text-orange-500 dark:text-white sm:text-title-xl2">
+                <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
+                    <h2 className="mb-9 text-2xl font-bold text-orange-500 dark:text-white sm:text-title-xl2">
                         Sign Up to Loop
                     </h2>
                     <form>

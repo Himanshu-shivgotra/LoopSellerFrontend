@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { AuthHeader } from './AuthHeader';
 
@@ -7,7 +7,7 @@ const SignIn: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string>('');
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent form from reloading the page
@@ -33,8 +33,8 @@ const SignIn: React.FC = () => {
   return (
     <>
     <AuthHeader/>
-    <div className="rounded-sm border flex items-center justify-center w-full   ">
-      <div className="w-full mx-auto max-w-[500px] shadow-default bg-white  ">
+    <div className="rounded-sm border flex items-center justify-center w-full min-h-[100vh]">
+      <div className="w-full mx-auto max-w-[500px] shadow-default bg-white dark:border-strokedark h-full dark:bg-boxdark">
         <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
           <span className="mb-1.5 block font-medium">Start for free</span>
           <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">

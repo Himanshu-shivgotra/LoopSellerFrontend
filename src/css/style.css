@@ -2,12 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add this CSS to your styles */
+/* styles.css */
+/* styles.css */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none; /* Hide arrows in WebKit browsers */
+    margin: 0; /* Reset margin */
 }
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Hide arrows in Firefox */
+}
+
+
 
 @layer base {
   body {

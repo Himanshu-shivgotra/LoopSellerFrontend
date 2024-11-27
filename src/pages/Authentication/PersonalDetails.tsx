@@ -48,11 +48,11 @@ const PersonalDetails: React.FC<{
   };
 
   return (
-    <div className="rounded-sm  flex items-center justify-center w-full ">
-      <div className="w-full mx-auto max-w-180 shadow-default bg-white h-full">
+    <div className="rounded-sm  flex items-center justify-center w-full">
+      <div className="w-full mx-auto max-w-180 shadow-default bg-white dark:border-strokedark h-full dark:bg-boxdark">
         <div className="w-full border-stroke dark:border-strokedark xl:border-l-2">
-          <div className="w-full sm:p-8 xl:px-10">
-            <h2 className="mb-6 text-2xl font-bold text-orange-500  sm:text-title-xl2">
+          <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
+            <h2 className="mb-9 text-2xl font-bold text-orange-500 dark:text-white sm:text-title-xl2">
               Sign Up to Loop
             </h2>
 
@@ -61,7 +61,7 @@ const PersonalDetails: React.FC<{
 
               <div className="mt-4 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div className="col-span-12 lg:col-span-3">
-                  <label className="mb-2.5 block font-medium text-black ">
+                  <label className="mb-2.5 block font-medium text-black dark:text-white">
                     Full Name
                   </label>
                   <input
@@ -70,7 +70,7 @@ const PersonalDetails: React.FC<{
                     value={data.fullName}
                     onChange={handleInputChange}
                     placeholder="Enter your full name"
-                    className={`w-full rounded-lg border py-4 pl-6 text-black outline-none ${errors.fullName ? "border-red-500" : "focus:border-orange-500"
+                    className={`w-full rounded-lg border py-4 pl-6 text-black outline-none dark:border-form-strokedark dark:bg-form-input dark:text-white ${errors.fullName ? "border-red-500" : "focus:border-orange-500"
                       }`}
                   />
                   {errors.fullName && (
@@ -78,7 +78,7 @@ const PersonalDetails: React.FC<{
                   )}
                 </div>
                 <div className="col-span-12 lg:col-span-3">
-                  <label className="mb-2.5 block font-medium text-black ">
+                  <label className="mb-2.5 block font-medium text-black dark:text-white">
                     Email Address
                   </label>
                   <input
@@ -87,7 +87,7 @@ const PersonalDetails: React.FC<{
                     value={data.email}
                     onChange={handleInputChange}
                     placeholder="Enter your email"
-                    className={`w-full rounded-lg border py-4 pl-6 text-black outline-none${errors.email ? "border-red-500" : "focus:border-orange-500"
+                    className={`w-full rounded-lg border py-4 pl-6 text-black outline-none dark:border-form-strokedark dark:bg-form-input dark:text-white ${errors.email ? "border-red-500" : "focus:border-orange-500"
                       }`}
                   />
                   {errors.email && (
@@ -126,9 +126,9 @@ const PersonalDetails: React.FC<{
                     value={data.phoneNumber}
                     onChange={handleInputChange}
                     placeholder="Enter your phone number"
+                    min="0"
                     className={`w-full rounded-lg border py-4 pl-6 text-black outline-none dark:border-form-strokedark dark:bg-form-input dark:text-white ${errors.phoneNumber ? "border-red-500" : "focus:border-orange-500"
                       }`}
-                    style={{ appearance: 'none' }}
                   />
                   {errors.phoneNumber && (
                     <p className="text-red-500 text-sm">{errors.phoneNumber}</p>
