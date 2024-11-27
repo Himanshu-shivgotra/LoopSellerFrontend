@@ -13,7 +13,7 @@ const SignIn: React.FC = () => {
     e.preventDefault(); // Prevent form from reloading the page
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users/signin', {
+      const response = await axios.post('https://loopsellerbackend.onrender.com/api/users/signin', {
         email,
         password,
       });
@@ -62,7 +62,7 @@ const SignIn: React.FC = () => {
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-orange-500 focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-orange-500"
+                className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-orange-500 focus-visible:shadow-none "
               />
             </div>
 

@@ -72,7 +72,7 @@ const MultiStepForm: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/users/submit-form",
+        "https://loopsellerbackend.onrender.com/api/users/submit-form",
         formData
       );
       console.log("Form data submitted successfully:", response.data);
