@@ -51,7 +51,7 @@ const Header = (props: {
 
   const handleLogout = () => {
     localStorage.removeItem('authToken'); // Clear the token
-    window.location.href="/auth/signin"
+    navigate("/auth/signin")
   };
 
   return (

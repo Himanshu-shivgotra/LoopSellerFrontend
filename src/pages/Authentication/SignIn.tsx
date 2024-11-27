@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { AuthHeader } from './AuthHeader';
 
 const SignIn: React.FC = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string>('');
@@ -23,7 +24,8 @@ const SignIn: React.FC = () => {
       // Save token to localStorage
       localStorage.setItem('authToken', token);
       // Redirect to dashboard
-      window.location.href="/dashboard"
+      // window.location.href="/dashboard"
+      navigate("/dashboard")
     } catch (error) {
       console.error('Error logging in:', error);
       setErrorMessage('Invalid email or password');

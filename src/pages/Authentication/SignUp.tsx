@@ -5,8 +5,10 @@ import BankDetails from "./BankDetails";
 import PreviewForm from "./PreviewForm";
 import axios from "axios";
 import { AuthHeader } from "./AuthHeader";
+import { useNavigate } from "react-router-dom";
 
 const MultiStepForm: React.FC = () => {
+const navigate =   useNavigate();
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [formData, setFormData] = useState<any>({
     personalDetails: {
@@ -78,7 +80,7 @@ const MultiStepForm: React.FC = () => {
       console.log("Form data submitted successfully:", response.data);
       localStorage.setItem("authToken", response.data.token);
       setErrorMessage(""); // Clear error message if submission is successful
-      window.location.href = "/dashboard"; // Navigate to the home page after successful submission
+      navigate("/dashboard"); // Navigate to the home page after successful submission
     } catch (error) {
       console.error("Error submitting form:", error);
       setErrorMessage("Error submitting form. Please try again later.");
